@@ -69,12 +69,12 @@ bot.on('callback_query:data', async (ctx) => {
         return;
     }
 
-    const answer = getCorrectAnswer(
-        callbackData.type.split('-')[0],
-        callbackData.questionId,
-    );
-    await ctx.reply(`Неверно! Правильный ответ: ${answer}`);
-    await ctx.answerCallbackQuery();
+    if (!callbackData.isCorrect) {;
+        await ctx.reply('Неверно!');
+        await ctx.answerCallbackQuery();
+        return;
+    }
+
 })
 
 bot.catch((err) => {
@@ -88,6 +88,6 @@ bot.catch((err) => {
     } else {
       console.error("Unknown error:", e);
     }
-  });
+});
 
 bot.start();
