@@ -1,4 +1,4 @@
-### helper-frondent-tg-bot
+### helper-frontent-tg-bot
 Телеграм бот с вопросами для подготовки к интервью Junior Frontend разработчику
 Ссылка на бота [Здесь](https://t.me/JunFrontDevBot).
 
